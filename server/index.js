@@ -14,8 +14,7 @@ env.config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-     origin:"https://keeper-app-atz9.onrender.com", 
-     "http://localhost:5173"
+     origin:"https://keeper-app-atz9.onrender.com"
 }
 ));
 app.use(bodyParser.json());
