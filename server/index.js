@@ -13,10 +13,7 @@ env.config();
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({
-     origin:"https://keeper-app-atz9.onrender.com"
-}
-));
+app.use(cors());
 app.use(bodyParser.json());
 
 const __filename = fileURLToPath(import.meta.url);
