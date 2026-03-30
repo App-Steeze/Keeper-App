@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, "client/dist")));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 const db = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -75,7 +75,7 @@ app.delete("/delete/:id", async(req, res)=>{
     }
 })
 
-app.get("/{*path}", (req, res) => {
+app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
