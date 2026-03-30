@@ -37,6 +37,7 @@ app.get("/notes", async (req, res) => {
       const { rows } = await db.query("SELECT * FROM keeper ORDER BY id DESC");
       res.json(rows);
     } catch (err) {
+        console.log("Full error:", err)
       res.status(500).json({ error: err.message });
     }
 })
@@ -48,6 +49,7 @@ app.post("/create-note", async(req,res)=>{
         const {rows} =await db.query("INSERT INTO keeper (title, content) VALUES ($1, $2) RETURNING *", [inputTitle, inputContent]);
         res.json(rows[0]);
     }catch(err){
+        console.log("Full error:", err);
         res.status(500).json({ error: err.message });
     }
 })
@@ -71,6 +73,7 @@ app.delete("/delete/:id", async(req, res)=>{
         await db.query("DELETE FROM keeper WHERE id = $1", [id]);
         res.json({ success: true });      
     }catch(err){
+        console.log("Full error:", err)
         res.status(500).json({ error: err.message });
     }
 })
