@@ -19,8 +19,6 @@ app.use(cors({
 ));
 app.use(bodyParser.json());
 
-console.log("Serving static from:", path.join(__dirname, "../client/dist"));
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
