@@ -17,8 +17,10 @@ function Note(props) {
   
   
   function handleClick() {
-    props.onDelete(props.id);
-  }
+    const confirmDelete = window.confirm("Are you sure you want to delete this note?");
+    if (confirmDelete) {
+      props.onDelete(props.id);
+  }}
 
   function onEdit(){
     setEditing(true)
