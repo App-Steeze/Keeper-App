@@ -41,7 +41,7 @@ app.post("/create-note", async(req,res)=>{
     const inputTitle = req.body.title;
     const inputContent =req.body.content;
     console.log("Request body received:", req.body);
-    if (!title || !content) {
+    if (!inputTitle || !inputContent) {
         console.log("Invalid data:", { inputTitle, inputContent });
         return res.status(400).json({ error: "Title or content missing" });
     }
