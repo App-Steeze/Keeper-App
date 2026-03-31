@@ -16,13 +16,19 @@ function Note(props) {
   }, [props.title, props.content]);
   
   
-  function handleClick() {
+  function handleClick(e) {
+    // prevent modal open
+    e.stopPropagation();
+
     const confirmDelete = window.confirm("Are you sure you want to delete this note?");
     if (confirmDelete) {
       props.onDelete(props.id);
   }}
 
-  function onEdit(){
+  function onEdit(e){
+    // prevent modal open
+    e.stopPropagation();
+
     setEditing(true)
     setSave(false)
   }
@@ -66,7 +72,7 @@ function Note(props) {
             {isSaved ?<button onClick={onEdit} >Edit</button>: <button>Save</button>}
       </form>) : 
       
-      (<div className="note" >
+      (<div className="note" onClick={props.onClick} >
         <h1>{props.title}</h1>
         <p>{props.content}</p>
         <button onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>

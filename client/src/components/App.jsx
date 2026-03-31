@@ -7,6 +7,7 @@ import CreateArea from "./CreateArea";
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const [selectedNote, setSelectedNote] = useState(null);
 
   async function fetchNotes(){
     try {
@@ -53,6 +54,7 @@ function App() {
     }
   }
 
+
   return (
     <div>
       <Header />
@@ -66,9 +68,29 @@ function App() {
             content={noteItem.content}
             onDelete={deleteNote}
             onUpdate={updateNote}
+            onView={()=>{setSelectedNote(noteItem)}}
           />
         );
       })}
+
+        {selectedNote && (
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedNote(null)}
+        >
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h1>{selectedNote.title}</h1>
+            <p>{selectedNote.content}</p>
+            <button onClick={() => setSelectedNote(null)}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );
