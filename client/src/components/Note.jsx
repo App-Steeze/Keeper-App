@@ -49,6 +49,11 @@ function Note(props) {
     setSave(true);
   }
 
+  function showModal(){
+    props.onView()
+
+  }
+
   return (
     <div className="note-container">
       {isEditing? 
@@ -72,7 +77,7 @@ function Note(props) {
             {isSaved ?<button onClick={onEdit} >Edit</button>: <button>Save</button>}
       </form>) : 
       
-      (<div className="note" onClick={props.onClick()} >
+      (<div className="note" onClick={showModal} >
         <h1>{props.title}</h1>
         <p>{props.content}</p>
         <button onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>

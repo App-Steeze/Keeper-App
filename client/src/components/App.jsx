@@ -54,6 +54,10 @@ function App() {
     }
   }
 
+  function stopModal(e){
+    e.stopPropagation()
+  }
+
 
   return (
     <div>
@@ -80,7 +84,7 @@ function App() {
         >
           <div
             className="modal-content"
-            onClick={(e) => e.stopPropagation()}
+            onClick={stopModal}
           >
             <h1>{selectedNote.title}</h1>
             <p>{selectedNote.content}</p>

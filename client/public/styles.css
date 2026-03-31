@@ -195,7 +195,7 @@ footer p {
   animation: fadeInScale 0.25s ease;
 }
 
-.modal-content h2 {
+.modal-content h1 {
   margin-bottom: 10px;
   font-size: 1.5rem;
 }
