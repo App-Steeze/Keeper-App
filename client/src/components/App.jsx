@@ -10,7 +10,7 @@ function App() {
 
   async function fetchNotes(){
     try {
-      const res = await axios.get(`${API_URL}/notes`);
+      const res = await axios.get(`/notes`);
       setNotes(res.data);
     } catch (err) {
       console.error(err);
