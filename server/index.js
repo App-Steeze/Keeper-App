@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import env from "dotenv";
-import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -13,7 +12,6 @@ env.config();
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
 app.use(bodyParser.json());
 
 const __filename = fileURLToPath(import.meta.url);

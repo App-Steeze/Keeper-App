@@ -5,8 +5,6 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
-const API_URL = import.meta.env.VITE_API_URL;
-
 function App() {
   const [notes, setNotes] = useState([]);
 
@@ -26,7 +24,7 @@ function App() {
 
   async function addNote(newNote) {
     try {
-      const res = await axios.post(`${API_URL}/create-note`, newNote);
+      const res = await axios.post(`/create-note`, newNote);
       setNotes(prevNotes => [res.data, ...prevNotes]);
     } catch (err) {
       console.error(err);
@@ -35,7 +33,7 @@ function App() {
 
   async function deleteNote(id) {
     try{
-      await axios.delete(`${API_URL}/delete/${id}`);
+      await axios.delete(`/delete/${id}`);
       setNotes(prevNotes => {
       return prevNotes.filter((noteItem) => {
         return noteItem.id !== id;
@@ -48,7 +46,7 @@ function App() {
 
   async function updateNote(id, updatedNote){
     try{
-      const res = await axios.put(`${API_URL}/update/${id}`, updatedNote);
+      const res = await axios.put(`/update/${id}`, updatedNote);
       setNotes(prevNotes => prevNotes.map(note => (note.id === id ? res.data : note)))
     }catch(err){
       console.log(err);
