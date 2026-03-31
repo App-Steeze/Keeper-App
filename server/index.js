@@ -40,6 +40,11 @@ app.get("/notes", async (req, res) => {
 app.post("/create-note", async(req,res)=>{
     const inputTitle = req.body.title;
     const inputContent =req.body.content;
+    console.log("Request body received:", req.body);
+    if (!title || !content) {
+        console.log("Invalid data:", { inputTitle, inputContent });
+        return res.status(400).json({ error: "Title or content missing" });
+    }
     try{
         const {rows} =await db.query("INSERT INTO keeper (title, content) VALUES ($1, $2) RETURNING *", [inputTitle, inputContent]);
         res.json(rows[0]);
