@@ -72,7 +72,7 @@ function Note(props) {
             {isSaved ?<button onClick={onEdit} >Edit</button>: <button>Save</button>}
       </form>) : 
       
-      (<div className="note" onClick={props.onClick} >
+      (<div className="note" onClick={props.onClick()} >
         <h1>{props.title}</h1>
         <p>{props.content}</p>
         <button onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>
