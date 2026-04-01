@@ -7,7 +7,6 @@ function Note(props) {
     title: props.title,
     content: props.content
   })
-  const [isSaved, setSave] = useState(false)
 
   useEffect(() => {
     setEditedNote({
@@ -31,7 +30,6 @@ function Note(props) {
     e.stopPropagation();
 
     setEditing(true)
-    setSave(false)
   }
 
   function handleChange(e) {
@@ -47,7 +45,6 @@ function Note(props) {
     e.preventDefault();
     await props.onUpdate(props.id, editedNote);
     setEditing(false);
-    setSave(true);
   }
 
   return (
