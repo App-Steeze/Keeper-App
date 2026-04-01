@@ -70,8 +70,9 @@ function Note(props) {
             onClick={(e) => e.stopPropagation()} // prevent closing modal when clicking inside
           >
             {isEditing ? (
-              <form onSubmit={onSave} >
+              <form className="modal-form" onSubmit={onSave} >
                 <input
+                    className="modalInput"
                     placeholder="title"
                     name="title"
                     value={editedNote.title}
@@ -80,6 +81,7 @@ function Note(props) {
                 />
 
                 <textarea
+                    className="modalTextarea"
                     placeholder="take a note"
                     name="content"
                     value={editedNote.content}
@@ -95,7 +97,7 @@ function Note(props) {
 
                 ) : (
                 <>
-                  <h2>{editedNote.title}</h2>
+                  <hi>{editedNote.title}</h1>
                   <p>{editedNote.content}</p>
                   <div className="modal-buttons">
                     <button style={{marginLeft: "10px"}} onClick={() => setEditing(true)}>Edit</button>
