@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
-function App() {
+function App(props) {
   const [notes, setNotes] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
 
@@ -91,6 +91,7 @@ function App() {
             <button onClick={() => setSelectedNote(null)}>
               Close
             </button>
+            <button onClick={props.onEdit()} >Edit</button>
           </div>
         </div>
       )}
