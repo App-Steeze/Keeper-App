@@ -94,7 +94,7 @@ function Note(props) {
 
                 ) : (
                 <>
-                  <hi>{editedNote.title}</h1>
+                  <h1>{editedNote.title}</h1>
                   <p>{editedNote.content}</p>
                   <div className="modal-buttons">
                     <button style={{marginLeft: "10px"}} onClick={() => setEditing(true)}>Edit</button>
