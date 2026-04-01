@@ -5,9 +5,8 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
-function App(props) {
+function App() {
   const [notes, setNotes] = useState([]);
-  const [selectedNote, setSelectedNote] = useState(null);
 
   async function fetchNotes(){
     try {
@@ -54,11 +53,6 @@ function App(props) {
     }
   }
 
-  function stopModal(e){
-    e.stopPropagation()
-  }
-
-
   return (
     <div>
       <Header />
@@ -72,29 +66,9 @@ function App(props) {
             content={noteItem.content}
             onDelete={deleteNote}
             onUpdate={updateNote}
-            onView={()=>{setSelectedNote(noteItem)}}
           />
         );
       })}
-
-        {selectedNote && (
-        <div
-          className="modal-overlay"
-          onClick={() => setSelectedNote(null)}
-        >
-          <div
-            className="modal-content"
-            onClick={stopModal}
-          >
-            <h1>{selectedNote.title}</h1>
-            <p>{selectedNote.content}</p>
-            <button onClick={() => setSelectedNote(null)}>
-              Close
-            </button>
-            <button onClick={props.onEdit()} >Edit</button>
-          </div>
-        </div>
-      )}
 
       <Footer />
     </div>
