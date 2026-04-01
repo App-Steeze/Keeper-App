@@ -94,7 +94,6 @@ function Note(props) {
                 <>
                   <h2>{editedNote.title}</h2>
                   <p>{editedNote.content}</p>
-                  <button onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>
                   <button onClick={onEdit}>Edit</button>
                 </>
               )
