@@ -176,6 +176,10 @@ footer p {
   font-size: 1.1em;
 }
 
+.modal-Editform button{
+  margin-right: 15px;
+}
+
 .modal-content h1 {
   margin-bottom: 10px;
   font-size: 1.5rem;
