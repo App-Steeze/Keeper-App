@@ -146,26 +146,21 @@ footer p {
 
 .modal-Editform{
   width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  width: 60%;
-  max-width: 600px;
-  resize: none;
-  background: #fff; 
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  animation: fadeInScale 0.25s ease;
-  float: left;   
 }
 
 .modal-Editform input, 
 .modal-Editform textarea{
   width: 100%;
-  padding: 25px;
+  border: none;
   outline: none;
   font-size: 1.2em;
   font-family: inherit;
   resize: none;
+}
+
+.modal-Editform input:focus,
+.modal-Editform textarea:focus {
+  background: #fff8e1;
 }
 
 .modal-Editform textarea{
@@ -176,7 +171,6 @@ footer p {
 
 .modal-Editform input{
   font-size: 1.1em;
-
 }
 
 .modal-content h1 {
@@ -197,6 +191,11 @@ footer p {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.modal-DeleteBtn{
+  background: transparent; 
+
 }
 
 .modal-content button:hover {
