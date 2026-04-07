@@ -67,7 +67,7 @@ function Note(props) {
             onClick={(e) => e.stopPropagation()} // prevent closing modal when clicking inside
           >
             {isEditing ? (
-              <form className="modal-form" onSubmit={onSave} >
+              <form className="modal-Editform" onSubmit={onSave} >
                 <input
                     className="modalInput"
                     placeholder="title"

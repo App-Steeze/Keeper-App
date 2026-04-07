@@ -183,7 +183,7 @@ footer p {
   z-index: 1000;
 }
 
-.modal-content, .modal-form {
+.modal-content{
   background: #fff; 
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
@@ -193,7 +193,23 @@ footer p {
   max-height: 80vh;
   overflow-y: auto;
   animation: fadeInScale 0.25s ease;
+  
 }
+
+.modal-Editform{
+  width: 100%;
+  border-radius: 10px;
+  padding: 25px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  background: #fff; 
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  animation: fadeInScale 0.25s ease;
+}
+
 .modal-content h1 {
   margin-bottom: 10px;
   font-size: 1.5rem;
