@@ -98,7 +98,7 @@ function Note(props) {
                   <p>{editedNote.content}</p>
                   <div className="modal-buttons">
                     <button style={{marginLeft: "10px"}} onClick={() => setEditing(true)}>Edit</button>
-                    <button className="modal-DeleteBtn" style={{marginLeft: "10px"}} onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>
+                    <button style={{marginLeft: "10px", background: "none"}} onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>
                     <button style={{marginLeft: "10px"}} onClick={() => setModalOpen(false)}>Close</button>
                   </div>
                 </>

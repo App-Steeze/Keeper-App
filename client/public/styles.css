@@ -161,12 +161,15 @@ footer p {
 .modal-Editform input:focus,
 .modal-Editform textarea:focus {
   background: #fff8e1;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 .modal-Editform textarea{
   font-size: 1.1em;
-  white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 .modal-Editform input{
@@ -181,6 +184,8 @@ footer p {
 .modal-content p {
   line-height: 1.6;
   white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word
 }
 
 .modal-content button {
@@ -191,11 +196,6 @@ footer p {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.modal-DeleteBtn{
-  background: transparent; 
-
 }
 
 .modal-content button:hover {
