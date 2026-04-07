@@ -53,8 +53,6 @@ function Note(props) {
       <div className="note" onClick={()=>setModalOpen(true)} >
         <h1>{props.title}</h1>
         <p>{props.content}</p>
-        <button onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>
-        <button onClick={onEdit} >Edit</button>
       </div>
 
       {isModalOpen && (
@@ -98,7 +96,7 @@ function Note(props) {
                   <p>{editedNote.content}</p>
                   <div className="modal-buttons">
                     <button style={{marginLeft: "10px"}} onClick={() => setEditing(true)}>Edit</button>
-                    <button style={{marginLeft: "10px", background: "none"}} onClick={handleClick}><img src="/assets/trash-outline.svg" /></button>
+                    <button style={{marginLeft: "10px"}} onClick={handleClick}>Delete</button>
                     <button style={{marginLeft: "10px"}} onClick={() => setModalOpen(false)}>Close</button>
                   </div>
                 </>
