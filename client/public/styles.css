@@ -81,58 +81,6 @@ footer p {
   outline: none;
 }
 
-.editedForm{
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 27%;
-  margin: 16px;
-  padding: 15px;
-  float: left;
-  resize: none;     
-  height: 20vh;
-}
-
-.editedForm input{
-  font-size: 1.1em;
-}
-
-.editedForm textarea{
-  font-size: 1.1em;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-
-}
-
-.editedForm input, 
-.editedForm textarea{
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;     
-  resize: none;
-
-}
-
-.editedForm button{
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  background-color: #f5ba13;
-  padding: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 45%;
-  
-}
-
 .originForm {
   position: relative;
   max-width: 60%;
@@ -198,16 +146,37 @@ footer p {
 
 .modal-Editform{
   width: 100%;
+  padding: 10px;
   border-radius: 10px;
-  padding: 25px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;
+  width: 60%;
+  max-width: 600px;
   resize: none;
   background: #fff; 
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   animation: fadeInScale 0.25s ease;
+  float: left;   
+}
+
+.modal-Editform input, 
+.modal-Editform textarea{
+  width: 100%;
+  padding: 25px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.modal-Editform textarea{
+  font-size: 1.1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.modal-Editform input{
+  font-size: 1.1em;
+
 }
 
 .modal-content h1 {
